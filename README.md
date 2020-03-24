@@ -1,12 +1,54 @@
 ## learning_tools [源码地址](https://github.com/hwholiday/learning_tools)
 
+# go-kit 微服务实践，从入门到精通系列    
+### [go-kit](https://github.com/hwholiday/learning_tools/tree/master/go-kit) (go-kit微服务)
+    1: v1 go-kit 微服务 基础使用 （HTTP）
+    2: v2 go-kit 微服务 添加日志（user/zap ,并为每个请求添加UUID） 
+    3: v3 go-kit 微服务 身份认证 （JWT）
+    4: v4 go-kit 微服务 限流 （uber/ratelimit 和 golang/rate 实现）
+    5: v5 go-kit 微服务 使用GRPC（并为每个请求添加UUID） 
+    6: v6 go-kit 微服务 服务注册与发现（etcd实现）
+    7: v7 go-kit 微服务 服务监控（prometheus 实现）
+    8: v8 go-kit 微服务 服务熔断（hystrix-go 实现）
+    9: v9 go-kit 微服务 服务链路追踪（jaeger 实现）(1)
+    10: v9 go-kit 微服务 服务链路追踪（jaeger 实现）(2)
+    11: v11 go-kit 微服务 添加一个简单网关
+
+# go_push 一个实用的消息推送服务  
+### [go_push](https://github.com/hwholiday/learning_tools/tree/master/go_push) (推送服务)
+    
+    ```base
+    ├── gateway // 长连接网关服务器
+    │   ├── push_job.go    // 分发任务
+    │   ├── room.go        // 房间，可作为某一类型的推送管理中心
+    │   ├── room_manage.go // 房间管理
+    │   ├── ws_conn.go     // 简单封装的websocket方法
+    │   ├── ws_handle.go   // 处理websocket协议方法
+    │   └── ws_server.go   // websocket服务
+    ├── logic  //逻辑服务器    
+    │   ├── http_handle.go // 推送，房间相关
+    │   └── http_server.go // http服务
+    └── main.go
+    ```
+
+### [micro_agent](https://github.com/hwholiday/learning_tools/tree/master/micro_agent) (micro微服务)
+    1: base 基础方法
+    2: conf 配置文件
+    3：handler 对外处理方法
+    4：model 数据格式
+    5：proto protobuf 文件
+
 ###  [all_packaged_library](https://github.com/hwholiday/learning_tools/tree/master/all_packaged_library) 里面封装了一些常用的库，有详细的介绍，持续更新
     1: base 里面封装mysql，redis，mgo，minio文件储存库S3协议，雪花算法，退出程序方法，redis全局锁，日志库等（插件形式可单独引用）
     2: logtool uber_zap日志库封装，可自动切分日志文件，压缩文件
     3: perf ppoof小插件
     4: push 集成苹果推送，google推送，华为推送
     5: quit 优雅的退出程序
+    6: registrySelector 基于etcd实现的服务注册，发现，负载均衡
 
+### [nsq](https://github.com/hwholiday/learning_tools/tree/master/docker) (为你的服务插上docker_compose翅膀)
+     1: docker 为你的服务插上docker_compose翅膀   
+   
 ### [kafka](https://github.com/hwholiday/learning_tools/tree/master/kafka) (分布式消息发布订阅系统)
     1: main 消息队列
     
@@ -123,6 +165,7 @@
     
 ### [interface](https://github.com/hwholiday/learning_tools/tree/master/interface) (interface包学习)
     1: main interface包学习
+    2: middleware Golang 基于interface 实现中间件
     
 ### [syncPool](https://github.com/hwholiday/learning_tools/tree/master/syncPool) (syncPool包学习)
     1: main syncPool包学习
